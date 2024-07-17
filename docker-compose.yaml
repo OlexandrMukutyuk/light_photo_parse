@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+  python:
+    build:
+      context: parser
+      dockerfile: Dockerfile
+    volumes:
+      - ./parser:/parser
+    ports:
+      - 8111:8000
+    restart: always
+
+
